@@ -32,7 +32,7 @@ void loop() {
   screen.print(bme.temperature);
   screen.println(" *C");
   screen.print("Temperature = ");
-  screen.print((bme.temperature)*(9/5) + 32);
+  screen.print((bme.temperature)*(1.8) + 32);
   screen.println(" *F");
 
   screen.print("Humidity = ");
