@@ -4,8 +4,6 @@
 #include <Adafruit_Sensor.h>
 #include "Adafruit_BME680.h"
 Adafruit_BME680 bme;
-
-Adafruit_BME680 bme;
 void setup() {
   screen.initialize;
   while (!Serial);
