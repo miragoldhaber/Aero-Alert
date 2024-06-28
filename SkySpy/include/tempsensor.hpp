@@ -46,5 +46,5 @@ void loop() {
   screen.println(" KOhms");
 
   screen.println();
-  delay(2000);
+  delay(30000);
 }
