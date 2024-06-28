@@ -1,3 +1,13 @@
+/**
+ * @file tempsensor.hpp
+ * @author mira
+ * @brief This sets up the temperature sensor, and makes it so that the temperature, humidity, and gas levels are printed onto the microcontroller screen every 30 seconds.
+ * @version 0.1
+ * @date 2024-06-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #ifndef TEMPSENSOR_HPP
 #define TEMPSENSOR_HPP
 #include <screen.hpp>

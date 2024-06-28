@@ -1,3 +1,13 @@
+/**
+ * @file screen.hpp
+ * @author mira
+ * @brief This file creates code to initialize & clear the microcontroller screen so that it can be used for the rest of the program.
+ * @version 0.1
+ * @date 2024-06-28
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #ifndef SCREEN_HPP
 #define SCREEN_HPP
 #include <Arduino.h>
