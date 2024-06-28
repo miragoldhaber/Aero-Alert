@@ -6,6 +6,7 @@
 #include <Adafruit_Sensor.h>
 #include "Adafruit_BME680.h"
 Adafruit_BME680 bme;
+namespace temperature{
 void setup() {
   initialize();
   while (!Serial);
@@ -49,5 +50,6 @@ void loop() {
 
   screen.println();
   delay(30000);
+}
 }
 #endif //TEMPSENSOR_HPP
