@@ -5,7 +5,7 @@
 #include "Adafruit_BME680.h"
 Adafruit_BME680 bme;
 void setup() {
-  screen.initialize;
+  initialize();
   while (!Serial);
   Serial.println(F("BME680 async test"));
 
@@ -23,7 +23,7 @@ void setup() {
 }
 // maybe make into a function
 void loop() {
-  screen.clear();
+  clear();
   if (! bme.performReading()) {
     screen.println("Failed to perform reading :(");
     return;
