@@ -1,3 +1,5 @@
+#ifndef SCREEN_HPP
+#define SCREEN_HPP
 #include <Arduino.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_ST7789.h>
@@ -22,3 +24,4 @@ void clear() {
   screen.fillScreen(ST77XX_BLACK);
   screen.setCursor(0,10);
 }
+#endif // SCREEN_HPP
