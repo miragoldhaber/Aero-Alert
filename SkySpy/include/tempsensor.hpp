@@ -7,7 +7,7 @@
 #include "Adafruit_BME680.h"
 Adafruit_BME680 bme;
 namespace temperature{
-void setup() {
+void prepare() {
   initialize();
   while (!Serial);
   Serial.println(F("BME680 async test"));
@@ -25,7 +25,7 @@ void setup() {
   bme.setGasHeater(320, 150); // 320*C for 150 ms
 }
 // maybe make into a function
-void loop() {
+void display() {
   clear();
   if (! bme.performReading()) {
     screen.println("Failed to perform reading :(");
