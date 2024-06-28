@@ -1,3 +1,5 @@
+#ifndef TEMPSENSOR_HPP
+#define TEMPSENSOR_HPP
 #include <screen.hpp>
 #include <Arduino.h>
 #include <Wire.h>
@@ -48,3 +50,4 @@ void loop() {
   screen.println();
   delay(30000);
 }
+#endif //TEMPSENSOR_HPP
