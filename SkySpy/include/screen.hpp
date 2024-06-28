@@ -16,8 +16,8 @@ void initialize(){
   screen.init(135,240);
   screen.setRotation(3);
   clear();
-  screen.setTextSize(3);
-  screen.setTextColor(ST77XX_ORANGE);
+  screen.setTextSize(2.5);
+  screen.setTextColor(ST77XX_MAGENTA);
 }
 
 void clear() {
