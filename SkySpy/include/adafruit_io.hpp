@@ -14,7 +14,14 @@
 #include <GPS.hpp>
 
 namespace adafruit_io{
-    
+    float last_latitude{};
+    float last_longitude{};
+    float last_altitude{};
+    float last_temp{};
+    float last_gas{};
+    float last_humid{};
+
+    bool IO_connected {false};
 }
 
 
