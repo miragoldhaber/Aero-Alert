@@ -31,6 +31,28 @@ namespace adafruit_io{
     AdafruitIO_Feed *humidity = io.feed("Humidity");
     AdafruitIO_Feed *temp = io.feed("Temperature");
     AdafruitIO_Feed *gas = io.feed("Gas In Kohms");
+
+    void attempt_connection(){
+        Serial.print("Connecting to Adafruit IO");
+
+        io.connect();
+
+        //waits for a connection for 30 seconds
+        for (std::size_t i{0}; (i < 60) && (io.status() < AIO_CONNECTED); i++) {
+            Serial.print(io.statusText());
+            delay(500);
+        }
+
+        if (io.status() < AIO_CONNECTED){
+            Serial.println("Connection failed");
+            temperature::display();
+        } else {
+            Serial.println("Connected to Adafruit IO \n");
+            Serial.println(io.statusText());
+            IO_connected = true;
+        }
+
+    }
 }
 
 
