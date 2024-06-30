@@ -56,6 +56,21 @@ namespace adafruit_io{
 
     // run this if connected
     void run() { io.run(); }
+
+    void save_to_IOT(){
+    
+    auto my_coords{GPS_STUFF::query_GPS()};
+
+
+  // make sure this makes sense
+    adafruit_io::gpscoords->save(1, my_coords.latitude, my_coords.longitude,my_coords.altitude);
+    // note to self -- this will save in celsius
+      adafruit_io::temp->save(bme.temperature);
+    // this is in %
+    adafruit_io::humidity->save(bme.humidity);
+    // this is in KOhms
+    adafruit_io::gas ->save(bme.gas_resistance / 1000);
+}
 }
 
 
