@@ -13,6 +13,10 @@
 #include <tempsensor.hpp>
 #include <GPS.hpp>
 
+namespace adafruit_io{
+    
+}
+
 
 
 #endif //ADAFRUIT_IO_HPP
