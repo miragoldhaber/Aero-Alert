@@ -22,6 +22,15 @@ namespace adafruit_io{
     float last_humid{};
 
     bool IO_connected {false};
+
+    // IO Handler
+    AdafruitIO_WiFi io(IO_USERNAME, IO_KEY, WIFI_SSID, WIFI_PASS);
+
+    // Feeds
+    AdafruitIO_Feed *gpscoords = io.feed("GPS Coordinates");
+    AdafruitIO_Feed *humidity = io.feed("Humidity");
+    AdafruitIO_Feed *temp = io.feed("Temperature");
+    AdafruitIO_Feed *gas = io.feed("Gas In Kohms");
 }
 
 
