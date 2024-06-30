@@ -53,6 +53,9 @@ namespace adafruit_io{
         }
 
     }
+
+    // run this if connected
+    void run() { io.run(); }
 }
 
 
