@@ -1,5 +1,5 @@
-#ifndef ADAFRUIT_IO_HPP
-#define ADAFRUIT_IO_HPP
+#ifndef COORD_HPP
+#define COORD_HPP
 
 
-#endif //ADAFRUIT_IO_HPP
+#endif //COORD_HPP
