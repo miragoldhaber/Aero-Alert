@@ -2,8 +2,8 @@
 #ifndef ADAFRUIT_IO_HPP
 #define ADAFRUIT_IO_HPP
 //get my key
-#define IO_USERNAME "mira_g"
-#define IO_KEY "aio_Wbaf05ckxTjPqCBfWpvnaueSNvCt"
+#define IO_USERNAME "mira"
+#define IO_KEY "password"
 //add whichever wifi I use + password
 // figure out how it can work in diff places
 #define WIFI_SSID "Fios-Q3R6Q"
