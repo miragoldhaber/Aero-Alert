@@ -15,7 +15,7 @@
 #include "Adafruit_BME680.h"
 Adafruit_BME680 bme;
 namespace temperature{
-  float temperature_farenheit{};
+  float temperature_farenheit = (bme.temperature)*(1.8) + 32;
   void prepare() {
     initialize();
     while (!Serial);
@@ -41,7 +41,6 @@ namespace temperature{
     screen.print(bme.temperature);
     screen.println(" *C");
     screen.print("Temperature = ");
-    float temperature_farenheit = (bme.temperature)*(1.8) + 32;
     screen.print((bme.temperature)*(1.8) + 32);
     screen.println(" *F");
     screen.print("Humidity = ");
@@ -51,7 +50,7 @@ namespace temperature{
     screen.print(bme.gas_resistance / 1000.0);
     screen.println(" KOhms");
     screen.println();
-    warnings();
+    void warnings();
     delay(30000);
   }
   void warnings(){
