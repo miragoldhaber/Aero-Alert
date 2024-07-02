@@ -1,6 +1,10 @@
-/*
-Code for GPS: allows user's mobile device to connect to the nearest Aero Alert device
-*/
+/**
+ * @file gps.hpp
+ * @author Megan
+ * @brief Allows the device to locate itself and obtain the most accurate weather results, which is then transmitted to the user's mobile devices
+ * @date 2024-06-26
+ * @copyright Copyright (c) 2024
+ */
 #ifndef GPS_HPP
 #define GPS_HPP
 
