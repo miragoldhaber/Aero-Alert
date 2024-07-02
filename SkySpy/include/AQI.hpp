@@ -1,3 +1,13 @@
+/**
+ * @file AQI.hpp
+ * @author mira
+ * @brief Takes the raw data from the gas sensor and prints that measurement to the Serial
+ * @version 0.1
+ * @date 2024-07-02
+ * 
+ * @copyright Copyright (c) 2024
+ * 
+ */
 #ifndef AQI_HPP
 #define AQI_HPP
 #include "Adafruit_SGP40.h"
