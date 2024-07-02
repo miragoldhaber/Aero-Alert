@@ -4,17 +4,20 @@
 #include <screen.hpp>
 #include <GPS.hpp>
 #include <coord.hpp>
+#include <AQI.hpp>
 
 void setup(){
   Serial.begin(115200);
   while(!Serial);
   temperature::prepare();
   gps::setup();
+  AQI::init();
   adafruit_io::attempt_connection();
 }
 void loop() {
   gps::loop();
   temperature::display();
+  AQI::display();
   adafruit_io::run();
   delay(5000);
 
