@@ -15,7 +15,8 @@
 #include "Adafruit_BME680.h"
 Adafruit_BME680 bme;
 namespace temperature{
-  float temperature_farenheit = (bme.temperature)*(1.8) + 32;
+  void warnings(float temperature_farenheit);
+  float temp_farenheit{};
   void prepare() {
     initialize();
     while (!Serial);
@@ -37,23 +38,22 @@ namespace temperature{
       screen.println("Failed to perform reading :(");
       return;
     }
-    screen.print("Temperature = ");
     screen.print(bme.temperature);
     screen.println(" *C");
-    screen.print("Temperature = ");
     screen.print((bme.temperature)*(1.8) + 32);
     screen.println(" *F");
-    screen.print("Humidity = ");
+    float temp_farenheit = (bme.temperature)*(1.8) + 32;
+    screen.print("Humidity: ");
     screen.print(bme.humidity);
     screen.println(" %");
-    screen.print("Gas = ");
+    screen.print("Gas resistance: ");
     screen.print(bme.gas_resistance / 1000.0);
     screen.println(" KOhms");
     screen.println();
-    void warnings();
+    warnings(temp_farenheit);
     delay(30000);
   }
-  void warnings(){
+  void warnings(float temperature_farenheit){
     if(temperature_farenheit <= -20){
       Serial.println("Stay indoors and bundle up in layers to avoid frostbite and possible death.");
     }

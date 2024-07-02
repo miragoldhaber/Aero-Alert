@@ -9,7 +9,7 @@
 #define GPS_HPP
 
 #include <Adafruit_GPS.h>
-#include <coord.hpp>
+#include <coords.hpp>
 
 namespace gps{
   #define GPSECHO false

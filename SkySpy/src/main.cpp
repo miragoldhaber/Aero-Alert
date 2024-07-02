@@ -3,7 +3,7 @@
 #include <adafruit_io.hpp>
 #include <screen.hpp>
 #include <GPS.hpp>
-#include <coord.hpp>
+#include <coords.hpp>
 #include <AQI.hpp>
 
 void setup(){

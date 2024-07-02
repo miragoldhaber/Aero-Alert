@@ -26,7 +26,7 @@ void initialize(){
   screen.init(135,240);
   screen.setRotation(3);
   clear();
-  screen.setTextSize(2.5);
+  screen.setTextSize(2.75);
   screen.setTextColor(ST77XX_MAGENTA);
 }
 
