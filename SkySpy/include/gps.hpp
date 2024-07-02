@@ -80,6 +80,5 @@ namespace gps{
   coord query_GPS(){
   return{GPS.latitude, GPS.lat, GPS.longitude, GPS.lon, GPS.altitude};
   }
-
-  #endif //GPS_HPP
 }
+  #endif //GPS_HPP
