@@ -14,6 +14,7 @@
 #include "Adafruit_SHT31.h"
 Adafruit_SGP40 sgp;
 Adafruit_SHT31 sht31;
+int32_t voc_index;
 namespace AQI{
     void init() {
         Serial.begin(115200);
@@ -35,6 +36,9 @@ namespace AQI{
         raw = sgp.measureRaw();
         Serial.print("Measurement: ");
         Serial.println(raw);
+        voc_index = sgp.measureVocIndex(bme.readTemperature(), bme.readHumidity());
+        screen.print("Voc Index: ");
+        screen.println(voc_index);
         delay(1000);
     }
 }

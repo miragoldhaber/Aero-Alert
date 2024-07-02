@@ -11,7 +11,9 @@
 
 #include <AdafruitIO_WiFi.h>
 #include <tempsensor.hpp>
-#include <GPS.hpp>
+#include <gps.hpp>
+#include <coords.hpp>
+#include <AQI.hpp>
 
 namespace adafruit_io{
     float last_latitude{};
@@ -31,6 +33,7 @@ namespace adafruit_io{
     AdafruitIO_Feed *humidity = io.feed("Humidity");
     AdafruitIO_Feed *temp = io.feed("Temperature");
     AdafruitIO_Feed *gas = io.feed("Gas In Kohms");
+    AdafruitIO_Feed *voc = io.feed("Voc Index");
 
     void attempt_connection(){
         Serial.print("Connecting to Adafruit IO");
@@ -59,7 +62,7 @@ namespace adafruit_io{
 
     void save_to_IOT(){
     
-    auto my_coords{GPS_STUFF::query_GPS()};
+    auto my_coords{gps::query_GPS()};
 
 
   // make sure this makes sense
@@ -70,6 +73,7 @@ namespace adafruit_io{
     adafruit_io::humidity->save(bme.humidity);
     // this is in KOhms
     adafruit_io::gas ->save(bme.gas_resistance / 1000);
+    adafruit_io::voc->save(voc_index);
 }
 }
 
